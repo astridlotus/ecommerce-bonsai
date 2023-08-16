@@ -1,0 +1,472 @@
+/*
+  Name: Astrid Bowden and Anna Sun
+  Date: 06.02.2023
+  Section: CSE 154 AB
+
+  This is the styles.css page for our ecommerce site: Bonsai & I. This includes all
+  the styles for the main portion of the page, not including the main horizontal nav at the top
+*/
+
+body {
+  margin: 0;
+}
+
+body,
+#item-container button,
+#all-orders button,
+.remove,
+#checkout,
+#item button,
+#user-page #side-nav > button {
+  font-family: "League Spartan", sans-serif;
+}
+
+#main-page h1,
+#main-page div h3,
+#error-msg,
+#cart h2,
+#number-of-items,
+#transaction-result p,
+#submit,
+#cart > p,
+#reviews > section,
+#history-msg,
+#logged-msg,
+#user-page h1 {
+  text-align: center;
+}
+
+#shopping,
+#item-container,
+#item-container.tight,
+#all-reviews,
+section#payment-info,
+#cart #container,
+#cart article,
+#payment-info p,
+#item > div,
+#item-page #reviews,
+#item section div,
+#item section,
+#item,
+#reviews,
+#allReviews,
+#reviews > section,
+.review div,
+#user-page > div:not(hr),
+#order-history:not(.hidden),
+#user-page #side-nav,
+#user-page article,
+.item-info,
+#user-page form {
+  display: flex;
+}
+
+#main-page h1 {
+  background-color: paleturquoise;
+  font-size: 30;
+}
+
+#shopping {
+  margin-top: 60px;
+}
+
+#order-history h2,
+#filter {
+  margin-left: 20px;
+}
+
+#filter,
+#main-page img.tight,
+#item-container div.tight,
+#order-history img {
+  width: 200px;
+}
+
+#filter input {
+  margin: 0.4rem;
+}
+
+#item-container,
+#item-container.tight,
+#allReviews {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 7px;
+  gap: 5px 5px;
+}
+
+#main-page img.tight {
+  height: 200px;
+}
+
+#item-container div {
+  margin: 0px 10px 10px 10px;
+}
+
+#view button,
+#user-page #side-nav > button,
+#home-page button,
+#leave-review button,
+#cart button {
+  cursor: pointer;
+}
+
+#view button,
+#home-page button,
+#leave-review button,
+#cart button {
+  border-radius: 3px;
+}
+
+#view button {
+  margin-top: 10px;
+  background: #d4efdf;
+  border: transparent;
+}
+
+#main-page a {
+  text-decoration: none;
+}
+
+#main-page div h3 {
+  margin-top: 0;
+}
+
+#main-page img,
+#main-page img.tight {
+  object-fit: cover;
+}
+
+#main-page img {
+  height: 330px;
+  margin-right: 25px;
+}
+
+#main-page img,
+.review {
+  width: 250px;
+}
+
+#main-page div p,
+#main-page div button {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#item-container button,
+#all-orders button,
+.remove,
+#checkout,
+#item button {
+  background-color: black;
+  font-size: 12px;
+}
+
+#item-container button,
+#all-orders button,
+#item button {
+  color: white;
+}
+
+#item-container button,
+#all-orders button,
+#total,
+.remove,
+#checkout,
+#item button {
+  font-weight: bold;
+}
+
+#item-container button,
+#all-orders button,
+.remove,
+#checkout,
+#item button,
+#home-page button,
+#leave-review button,
+#cart button {
+  border: 1px solid black;
+}
+
+#item-container button,
+#all-orders button {
+  padding: 6px;
+}
+
+#item-container button:hover,
+#all-orders button:hover,
+.remove,
+#checkout,
+.remove:hover,
+#checkout.hover,
+#item button:hover {
+  background-color: white;
+}
+
+#cart h2 {
+  margin: 20px 20px;
+}
+
+section#payment-info,
+#cart img,
+#item section,
+#reviews,
+#order-history,
+#existing-login,
+#user-page #side-nav,
+.item-info,
+#user-page form {
+  flex-direction: column;
+}
+
+section#payment-info,
+#cart img,
+#payment-info p,
+#item section div,
+#reviews > section,
+.review div {
+  justify-content: space-between;
+}
+
+section#payment-info,
+#cart img {
+  height: 350px;
+  min-width: 200px;
+}
+
+#cart #container,
+#item section div {
+  align-items: flex-end;
+}
+
+#cart #container,
+#item {
+  justify-content: center;
+}
+
+#cart #container h3 {
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+#cart #container img {
+  margin-right: 30px;
+}
+
+.remove {
+  margin-top: 100px;
+}
+
+.remove,
+#checkout,
+#item button {
+  padding: 10px;
+}
+
+#checkout,
+#user-page input,
+#user-page hr {
+  width: 100%;
+}
+
+#cart hr {
+  margin-left: 40%;
+  margin-right: 20px;
+}
+
+#item-page h2,
+#order-history h2,
+.item-info a {
+  font-size: 20px;
+}
+
+#item img,
+#user-page form {
+  align-self: center;
+}
+
+#item img {
+  padding-top: 16px;
+  width: 35rem;
+  padding-right: 0.2rem;
+}
+
+#item section {
+  min-width: 400px;
+  padding-left: 2rem;
+}
+
+#item p {
+  line-height: 1.5;
+}
+
+#item,
+#reviews {
+  margin: 1.5rem 3.5rem 1rem 3rem;
+}
+
+.review {
+  margin: 1rem 1.5rem 0 0;
+  background-color: #d4efdf;
+  padding: 1rem 1rem 0 1rem;
+  min-height: 100px;
+  min-width: 250px;
+}
+
+#reviews img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+#reviews > section {
+  width: 20rem;
+}
+
+.review div div,
+#user-page > div:not(hr),
+#user-page #side-nav {
+  gap: 10px;
+}
+
+fieldset {
+  width: 180px;
+  padding-right: 0;
+  padding-left: 5px;
+}
+
+#order-history {
+  width: 80%;
+}
+
+.hidden {
+  display: none;
+}
+
+#home-page,
+#existing-login {
+  margin: auto;
+}
+
+#user-page #side-nav {
+  padding-right: 10px;
+  margin: 0px 30px 20px 10px;
+  width: 120px;
+  border-right: solid;
+  align-self: flex-start;
+}
+
+#filter,
+#user-page #side-nav > button {
+  font-size: 16px;
+}
+
+#user-page #side-nav > button,
+#user-page input {
+  border: none;
+}
+
+#user-page input, #side-nav > button {
+  outline: none;
+}
+
+#user-page #side-nav > button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-align: left;
+}
+
+#order-history h2 {
+  margin-bottom: 0;
+}
+
+#order-history img,
+#user-page > div:not(hr) {
+  margin: 20px;
+}
+
+.item-info {
+  padding-top: 20px;
+}
+
+.item-info a {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.item-info p {
+  font-size: 15px;
+  margin: 2px;
+}
+
+#user-page form {
+  width: 60vw;
+  max-width: 768px;
+  border: 1px solid #ddd;
+  padding: 3vw;
+  border-radius: 5px;
+}
+
+#user-page label {
+  margin-bottom: 15px;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+#user-page input,
+#home-page button,
+#leave-review button,
+#cart button {
+  margin-top: 20px;
+}
+
+#user-page input {
+  padding: 10px 0px;
+}
+
+#user-page span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(30px);
+  font-size: 0.825em;
+  transition-duration: 300ms;
+}
+
+#home-page button,
+#leave-review button,
+#cart button {
+  padding: 15px 5px;
+  background: black;
+  color: #fff;
+}
+
+#home-page button:hover,
+#leave-review button:hover,
+#cart button:hover {
+  background: white;
+}
+
+/** here **/
+#home-page button:hover,
+#leave-review button:hover,
+#cart button:hover,
+.item-info a,
+#item-container button:hover,
+#all-orders button:hover,
+#item button:hover,
+.remove:hover,
+#checkout.hover {
+  color: black;
+}
+
+#home-page button:disabled,
+#leave-review button:disabled {
+  cursor: not-allowed;
+}
+
+#user-page label:focus-within > span,
+#user-page input:not(:placeholder-shown) + span {
+  transform: translateY(0px);
+}

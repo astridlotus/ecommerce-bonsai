@@ -1,0 +1,91 @@
+/*
+  Name: Astrid Bowden and Anna Sun
+  Date: 06.02.2023
+  Section: CSE 154 AB
+
+  This is the nav.css page for our ecommerce site: Bonsai & I. This file styles
+  the big horizontal nav bar at the top of the page which is consistent across
+  all parts of the site.
+*/
+
+#nav .brand {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1rem 1rem;
+}
+
+#nav {
+  position: relative;
+  background-color: #d4efdf;
+}
+
+#nav > div, #nav nav > ul, #nav ul > li, #nav a, li button {
+  display: flex;
+}
+
+#nav > div, #nav ul > li {
+  align-items: center;
+}
+
+#nav > div {
+  padding: 0, 2rem;
+  justify-content: space-between;
+}
+
+#nav ul > li {
+  padding: 1.5rem 1rem;
+  justify-content: center;
+}
+
+#nav a, #nav button {
+  color: #222;
+  vertical-align: middle;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#nav ul span {
+  margin-top: auto;
+}
+
+#nav button {
+  background-color: transparent;
+  border: transparent;
+  font-family: "League Spartan", sans-serif;
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+#nav .button span {
+  display: initial;
+}
+
+#nav ol,
+ul {
+  list-style: none;
+}
+
+#acct-btn img, #bag-btn img, #search-btn img {
+  width: 20px;
+  padding-right: 5px;
+}
+
+#nav #search-btn, #search-btn img {
+  padding: 0;
+}
+
+#nav #search-btn {
+  background-color: black;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#nav #search-btn:disabled {
+  background-color: gray;
+}
+
+li button {
+  vertical-align: center;
+}

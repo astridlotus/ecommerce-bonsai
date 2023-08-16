@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+  Name: Astrid Bowden and Anna Sun
+  Date: 06.02.2023
+  Section: CSE 154 AB
+
+  This is the index.html page for our ecommerce site: Bonsai & I. It includes all of the items
+  for sale, information about the items, and information about the user logged in such as
+  their order history. All Photos used in the project are from an open source website
+  Unsplash.com
+-->
+<html lang="en">
+  <head>
+    <script src="index.js"></script>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="nav-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
+      rel="stylesheet"
+    />
+    <title>ecommerce</title>
+  </head>
+  <header id="nav">
+    <div>
+      <button class="brand">Bonsai &amp; I</button>
+      <nav>
+        <ul>
+          <li id="searchbar">
+            <label for="search">Search: </label>
+            <input id="search" type="text" />
+            <button id="search-btn" disabled>
+              <img src="img/search-icon.png" alt="search icon" />
+            </button>
+          </li>
+          <li>
+            <button id="acct-btn">
+              <img src="img/login-icon.png" alt="account icon" />
+              <span>Account</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <main>
+      <h2 class="hidden" id="error-msg">
+        Whoops, something went wrong. Try again later
+      </h2>
+      <section id="main-page">
+        <section id="shopping">
+          <section id="filter">
+            <fieldset>
+              <legend>Sort By</legend>
+              <div>
+                <input type="checkbox" id="price" />
+                <label for="price-options">Price</label>
+                <select name="price-options" id="price-options">
+                  <option label="none" value="N/A"></option>
+                  <option value="25">$25</option>
+                  <option value="100">$100</option>
+                  <option value="1000">$1000</option>
+                  <option value="5000">$5000</option>
+                </select>
+              </div>
+              <div>
+                <input type="checkbox" id="size" />
+                <label for="size-options">Size</label>
+                <select name="size-options" id="size-options">
+                  <option label="none" value="N/A"></option>
+                  <option value="small">small</option>
+                  <option value="medium">medium</option>
+                  <option value="large">large</option>
+                </select>
+              </div>
+              <div>
+                <input type="checkbox" id="difficulty" />
+                <label for="difficulty-options">Difficulty</label>
+                <select name="difficulty-options" id="difficulty-options">
+                  <option label="none" value="N/A"></option>
+                  <option value="easy">easy</option>
+                  <option value="medium">medium</option>
+                  <option value="difficult">difficult</option>
+                </select>
+              </div>
+            </fieldset>
+            <section id="view">
+              <button id="compact">Compact</button>
+              <button id="cozy">Cozy</button>
+            </section>
+          </section>
+          <section id="item-container" class="tight"></section>
+        </section>
+      </section>
+
+      <section id="cart" class="hidden">
+        <p class="hidden">Sorry, this item is out of stock!</p>
+        <section id="submit" class="hidden">
+          <p>
+            Are you sure you would like to submit this transaction of
+            $<span>0</span>?
+          </p>
+          <section>
+            <label for="confirm-password">Confirm your Password:</label>
+            <input id="confirm-password" type="text" />
+          </section>
+          <button>Yes, submit transaction</button>
+        </section>
+        <section id="transaction-result" class="hidden">
+          <p>Success! Thank you for your purchase</p>
+        </section>
+        <div>
+          <h2>Order Summary</h2>
+          <section id="container">
+            <section id="payment-info">
+              <h3>ITEM NAME</h3>
+              <div>
+                <p id="subtotal"><span>Subtotal:</span> <span>$0</span></p>
+                <p id="shipping"><span>Shipping:</span> <span>$10</span></p>
+                <p id="tax"><span>Tax:</span> <span>$0</span></p>
+                <p id="total"><span>Total:</span> <span>$0</span></p>
+                <button id="checkout">Checkout</button>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+      <section id="item-page" class="hidden">
+        <section id="item"></section>
+        <section id="reviews">
+          <section>
+            <h1>Reviews</h1>
+            <h1><span id="global-rating">5</span> / 5</h1>
+          </section>
+          <div id="all-reviews"></div>
+        </section>
+      </section>
+
+      <section id="user-page" class="hidden">
+        <div>
+          <section id="side-nav">
+            <button id="home-btn">Home</button>
+            <button id="order-btn">Order History</button>
+            <button id="logout-btn">Logout</button>
+          </section>
+          <section id="home-page">
+            <section id="logged-in" class="hidden">
+              <p id="logged-msg">
+                Welcome back, feel free to check out your order history, change
+                your profile, or logout from here.
+              </p>
+            </section>
+            <section id="guest-user">
+              <div id="existing-login">
+                <form id="form1">
+                  <label for="existing-user">
+                    <input type="text" id="existing-user" required />
+                    <span>Username</span>
+                  </label>
+                  <label for="existing-pwd">
+                    <input type="password" id="existing-pwd" required />
+                    <span>Password</span>
+                  </label>
+                  <button id="sign-in-btn" disabled>Sign in</button>
+                  <button class="switch">Create an account</button>
+                </form>
+              </div>
+              <div id="create-account" class="hidden">
+                <form id="form2">
+                  <label for="new-email">
+                    <input type="email" id="new-email" required />
+                    <span>Email</span>
+                  </label>
+                  <label for="new-user">
+                    <input type="text" id="new-user" required />
+                    <span>Username</span>
+                  </label>
+                  <label for="new-pwd">
+                    <input type="password" id="new-pwd" required />
+                    <span>New password</span>
+                  </label>
+                  <button id="create-btn" disabled>Create an Account</button>
+                  <button class="switch">
+                    Already have an account? Sign in here
+                  </button>
+                </form>
+              </div>
+            </section>
+          </section>
+          <section id="order-history" class="hidden">
+            <h1>Order History</h1>
+            <p id="history-msg" class="hidden">Hey</p>
+            <div id="all-orders"></div>
+          </section>
+          <section id="leave-review" class="hidden">
+            <form id="review-form">
+              <label for="rating">
+                <input type="number" id="rating" required min="0" max="5" />
+                <span>Rating (0 to 5)</span>
+              </label>
+              <label for="review-text">
+                <input type="text" id="review-text" />
+                <span>Write your review here (optional)</span>
+              </label>
+              <button disabled>Submit</button>
+            </form>
+          </section>
+          <section id="variable-msg" class="hidden">
+            <p>You've Already reviewed this item!</p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
