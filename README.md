@@ -1,5 +1,7 @@
 # Ecommerce Website - Bonsai
 
+Front end code stored in public folder
+
 ## Website Description
 This is a demonstration ecommerce website for selling bonsai trees which I produced as my final project for my Web Programming class at the University of Washington. I collaborated with Anna Sun. This is my first full stack website! 
 
